@@ -1,5 +1,6 @@
 #include QMK_KEYBOARD_H
 
+#define KC_ENM4 LT(4, KC_ENT)
 #define KC_SPM3 LT(3, KC_SPC)
 #define KC_TBM2 LT(2, KC_TAB)
 #define KC_BSM1 LT(1, KC_BSPC)
@@ -18,7 +19,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,            KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
     KC_GUIA, KC_ALTS, KC_CTLD, KC_SFTF, KC_G,            KC_H,    KC_SFTJ, KC_CTLK, KC_ALTL, KC_GUSC,
     KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,            KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
-                               KC_TBM2, KC_BSM1,         KC_SPM3, KC_ENT
+                               KC_TBM2, KC_BSM1,         KC_SPM3, KC_ENM4
   ),
 
   [1] = LAYOUT(
@@ -29,10 +30,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [2] = LAYOUT(
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, QK_BOOT,         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_ESC,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, QK_BOOT,         KC_TRNS, KC_PSTE, KC_COPY, KC_CUT,  KC_ESC,
     KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_TRNS,         KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, CW_TOGG,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,         KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_CAPS,
-                               KC_TRNS, KC_TRNS,         KC_DEL,  KC_TRNS
+                               KC_TRNS, KC_TRNS,         KC_DEL,  KC_INS
   ),
 
   [3] = LAYOUT(
@@ -42,4 +43,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                KC_TRNS, KC_TRNS,         KC_TRNS, KC_TRNS
   ),
 
+  [4] = LAYOUT(
+    KC_F10,  KC_F7,   KC_F8,   KC_F9,   KC_PSCR,         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+    KC_F11,  KC_F4,   KC_F5,   KC_F6,   KC_SCRL,         KC_TRNS, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI,
+    KC_F12,  KC_F1,   KC_F2,   KC_F3,   KC_PAUS,         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+                               KC_TRNS, KC_TRNS,         KC_TRNS, KC_TRNS
+  ),
 };
